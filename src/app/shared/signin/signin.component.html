@@ -1,0 +1,28 @@
+<form class="auth-form row col-sm-12" [formGroup]="loginForm" (ngSubmit)="loginForm.valid && loginAttempt()">
+  <label class="control-label" for="login">Your login</label>
+  <div *ngIf="!loginForm.get('login').valid && loginForm.get('login').touched">
+    <span *ngIf="loginForm.get('login').errors['required']"
+          class="auth-form--validation-error"
+    >Required login</span>
+    <span *ngIf="loginForm.get('login').errors['pattern']"
+          class="auth-form--validation-error"
+    >Only latin symbols, numbers and underscore sign is allowed.</span>
+    <span *ngIf="loginForm.get('login').errors['minlength']"
+          class="auth-form--validation-error"
+    >Login is to short. Min length is {{ loginForm.get('login').errors['minlength']['requiredLength'] }}</span>
+  </div>
+  <input type="text" id="login" formControlName="login" class="auth-form--input form-control" placeholder="Login">
+
+
+  <label class="control-label" for="password">Your password</label>
+  <div *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">
+    <span *ngIf="loginForm.get('password').errors['required']"
+          class="auth-form--validation-error"
+    >Required password</span>
+    <span *ngIf="loginForm.get('password').errors['minlength']"
+          class="auth-form--validation-error"
+    >Password is to short</span>
+  </div>
+  <input type="password" id="password" formControlName="password" class="auth-form--input form-control" placeholder="Password">
+  <button class="auth-form--button btn btn-success" [disabled]="!loginForm.valid">Login</button>
+</form>

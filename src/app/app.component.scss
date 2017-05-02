@@ -1,0 +1,6 @@
+@import "../assets/styles/vars-and-mixins";
+
+.content {
+  margin: $header-height auto $footer-height auto;
+  padding: 40px 0;
+}

@@ -1,0 +1,14 @@
+@import "../../../assets/styles/vars-and-mixins";
+
+:host {
+  height: $footer-height;
+  background: #999;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  color: white;
+  line-height: $footer-height;
+  text-align: center;
+}

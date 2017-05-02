@@ -1,0 +1,24 @@
+@import "../../../assets/styles/vars-and-mixins";
+:host {
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
+}
+.auth-form {
+  display: block;
+  margin: 20px 0;
+  background-color: $light-bg-color;
+  padding: 15px;
+  border: 1px solid $light-bg-color_border;
+  @include border-radius(20px);
+  &--input {
+    margin: 3px 0;
+  }
+  &--validation-error {
+    color: darkred;
+  }
+  &--button {
+    width: 150px;
+    margin-top: 15px;
+  }
+}

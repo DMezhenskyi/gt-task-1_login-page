@@ -1,0 +1,24 @@
+// Vars for project
+
+$error-color: darkred;
+$success-color: darkgreen;
+
+$error-color_text: $error-color;
+$success-color_text: $success-color;
+
+$error-color_border: $error-color + #222222;
+$success-color_border: $success-color + #222222;
+
+$custom-input-height: 42px;
+$header-height: 40px;
+$footer-height: 60px;
+
+$light-bg-color: #f6f6f6;
+$light-bg-color_border: $light-bg-color - #111111;
+
+// Mixins
+@mixin border-radius($radius: 6px) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
