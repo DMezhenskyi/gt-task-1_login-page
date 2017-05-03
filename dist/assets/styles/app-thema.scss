@@ -1,0 +1,19 @@
+@import "vars-and-mixins";
+
+.ng-invalid.ng-touched {
+  border-color: darkred;
+}
+.ng-valid {
+  border-color: $success-color_border;
+}
+.control-label {
+  font-weight: 400;
+  margin: 10px 0 5px 0;
+}
+.form-control, .btn {
+  height: $custom-input-height;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
