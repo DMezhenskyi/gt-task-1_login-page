@@ -34,7 +34,6 @@ export class SigninComponent implements OnInit {
   }
 
   loginAttempt(): void {
-    console.log(this.loginForm);
     this._auth.logIn(this.loginForm.value).subscribe(
       () => this.loginForm.reset(), (error: Error) => this._error.handleError(error)
     );

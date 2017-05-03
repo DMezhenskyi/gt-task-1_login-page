@@ -1,14 +1,13 @@
 <section class="container">
   <div class="header-content row">
-    <div class="header-content--hello col-lg-6 col-md-6 col-sm-10 col-xs-10">
+    <div class="header-content--hello col-lg-6 col-md-6 col-sm-10 col-xs-9">
       <a href="#top">Hello GreenTube!</a>
     </div>
-    <div class="header-content--logged-in-user hidden-sm hidden-xs col-lg-6 col-md-6 "
-         *ngIf="loggedInUser">{{ loggedInUser.name }} ({{ loggedInUser.email }}) -
-      <a href="#" class="header-content--logout" (click)="logoutUser()">Logout</a>
-    </div>
-    <div *ngIf="loggedInUser" class="header-content--logged-in-user__mobile hidden-md hidden-lg">
-      <a href="#" class="header-content--logout" (click)="logoutUser()">Logout</a>
+    <div class="header-content--logged-in-user col-lg-6 col-md-6 col-sm-2 col-xs-3">
+      <div class="header-content--logged-in-box" *ngIf="loggedInUser">
+        <span class="hidden-sm hidden-xs" >{{ loggedInUser.name }} ({{ loggedInUser.email }}) -</span>
+        <a href="#" class="header-content--logout" (click)="logoutUser()">Logout</a>
+      </div>
     </div>
   </div>
 </section>

@@ -30,7 +30,6 @@ export class GlobalErrorNotificatorComponent implements OnInit {
   @HostBinding('@notificator') get notificator() {
     return this.state;
   }
-  @HostBinding('class.global-error-window') globalErrorWindow = 'global-error-window';
 
   constructor(private _error: ErrorHandler) { }
 
@@ -43,7 +42,7 @@ export class GlobalErrorNotificatorComponent implements OnInit {
     this.error = error;
     this.state = 'showed';
     clearTimeout(this._timer);
-    this._timer = setTimeout(() => { this.state = 'hidden'; }, 5000);
+    this._timer = setTimeout(() => this.onHide(), 5000);
   }
 
   onHide(): void {
